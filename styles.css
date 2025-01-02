@@ -347,4 +347,108 @@ input:focus, textarea:focus {
     .changelog-section {
         padding: 2rem 1rem;
     }
+}
+
+/* Changelog Section Styles */
+.changelog {
+    padding: 2rem;
+    margin: 2rem 0;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+}
+
+.changelog h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.changelog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.changelog-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.changelog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.card-header i {
+    font-size: 24px;
+    margin-right: 1rem;
+    color: #0066cc; /* Your primary brand color */
+}
+
+.card-header h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: #0066cc;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #004999;
+    text-decoration: underline;
+}
+
+.details-content {
+    display: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.details-content.show {
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .changelog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .changelog {
+        padding: 1rem;
+    }
+    
+    .changelog-card {
+        padding: 1rem;
+    }
 } 

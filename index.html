@@ -53,9 +53,12 @@
 
         <!-- Feedback Form Section -->
         <section class="feedback-section">
-            <h2>Share Your Feedback</h2>
-            <p>Help us improve by sharing your experience with AI Resolve Bot.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-WDkJzFw7mSSRNt0DrMZEb_Lk1-kCLcblCFjXX4aHdImYPQ/viewform?usp=dialog" class="feedback-button" target="_blank">Give Feedback</a>
+            <div class="feedback-container">
+                <span class="feedback-emoji">💭</span>
+                <h2>Share Your Feedback</h2>
+                <p>Help us improve by sharing your experience with AI Resolve Bot.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-WDkJzFw7mSSRNt0DrMZEb_Lk1-kCLcblCFjXX4aHdImYPQ/viewform?usp=dialog" class="feedback-button" target="_blank">Give Feedback</a>
+            </div>
             <!-- Hidden link for admin reference -->
             <!-- Google Sheets Response Collection: https://docs.google.com/spreadsheets/d/1j-XRss3zg-sZHdDL6n80enyZ2UdbPgw0LsVB6K_qTaU/edit?usp=sharing -->
         </section>
@@ -64,24 +67,76 @@
 
         <!-- Changelog Section -->
         <section class="changelog">
-            <h2>What's New - January 2025</h2>
-            <div class="changelog-content">
-                <ul>
-                    <li>
-                        Our chatbot now leverages the latest advancements in Chain of Thought reasoning, enabling it to provide more accurate, step-by-step guidance for complex dispute scenarios. This enhancement improves decision-making and clarity for agents handling intricate chargeback queries.
-                    </li>
-                    <li>
-                        The bot has been trained to include the latest Visa Core Rules from October 2024. These updates ensure agents have access to the most current guidelines for managing chargebacks, compliance requirements, and dispute resolution.
-                    </li>
-                    <li>
-                        We've integrated comprehensive guidance on US Regulation E, providing clarity on consumer protection laws. This feature helps agents navigate disputes and ensures regulatory compliance
-                    </li>
-                    <li>
-                        Enhanced detection and guidance for dispute and chargeback abuse patterns, helping agents identify and handle potential false claims more effectively.
-                    </li>
-                </ul>
+            <h2>What's New - March 2024</h2>
+            <div class="changelog-grid">
+                <!-- Chain of Thought Card -->
+                <div class="changelog-card">
+                    <div class="card-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Enhanced AI Reasoning</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Our chatbot now leverages Chain of Thought reasoning for more accurate, step-by-step guidance in complex dispute scenarios.</p>
+                        <button class="read-more" onclick="toggleDetails('cot-details')">Read More</button>
+                        <div id="cot-details" class="details-content">
+                            <p>This enhancement improves decision-making and clarity for agents handling intricate chargeback queries.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visa Rules Card -->
+                <div class="changelog-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-open"></i>
+                        <h3>Updated Visa Rules</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Latest Visa Core Rules from October 2024 integrated into our knowledge base.</p>
+                        <button class="read-more" onclick="toggleDetails('visa-details')">Read More</button>
+                        <div id="visa-details" class="details-content">
+                            <p>Ensures agents have access to current guidelines for managing chargebacks, compliance requirements, and dispute resolution.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regulation E Card -->
+                <div class="changelog-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Regulation E Guidance</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Comprehensive guidance on US Regulation E for consumer protection compliance.</p>
+                        <button class="read-more" onclick="toggleDetails('reg-details')">Read More</button>
+                        <div id="reg-details" class="details-content">
+                            <p>Helps agents navigate disputes while ensuring full regulatory compliance with consumer protection laws.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Abuse Detection Card -->
+                <div class="changelog-card">
+                    <div class="card-header">
+                        <i class="fas fa-search"></i>
+                        <h3>Abuse Detection</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Enhanced detection and guidance for dispute and chargeback abuse patterns.</p>
+                        <button class="read-more" onclick="toggleDetails('abuse-details')">Read More</button>
+                        <div id="abuse-details" class="details-content">
+                            <p>Helps agents identify and handle potential misuse cases more effectively with advanced pattern recognition.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
+        <script>
+            function toggleDetails(id) {
+                const content = document.getElementById(id);
+                content.classList.toggle('show');
+            }
+        </script>
     </main>
 </body>
 </html> 
