@@ -8,26 +8,36 @@
 </head>
 <body>
     <main>
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <div class="welcome-content">
+                <span class="welcome-emoji">👋</span>
+                <h2>Welcome WISE friends and new users from the Asia Pacific region!</h2>
+                <p>I'm here to help you with your questions and tasks. 🤖 </p>
+            </div>
+        </div>
+
+        <div style="margin: 2rem 0"></div>
+     
         <header>
-            <h1>Your Chatbot Name</h1>
-            <p class="tagline">Your personal AI assistant</p>
+            <h1>AI Resolve Bot</h1>
+            <p class="tagline">AI Resolve Bot is your go-to assistant for Visa and Mastercard (coming soon) queries. It provides instant guidance on chargebacks, compliance, fraud and technical messages queries, empowering agents to work smarter and faster.</p>
         </header>
 
-        <section class="chat-container">
-            <!-- Replace CHATBASE_URL with your actual chatbase embed URL -->
+        <section id="chat" class="chat-container">
             <iframe
-            src="https://www.chatbase.co/chatbot-iframe/oTw5nLOaCl4Yo6XjXN17B"
-            width="100%"
-            style="height: 100%; min-height: 700px"
-            frameborder="0"
-        ></iframe>
+                src="https://www.chatbase.co/chatbot-iframe/oTw5nLOaCl4Yo6XjXN17B"
+                width="100%"
+                style="height: 100%; min-height: 700px"
+                frameborder="0"
+            ></iframe>
         </section>
 
         <section class="features">
             <div class="feature-card">
                 <span class="emoji">🤖</span>
-                <h3>Smart Conversations</h3>
-                <p>Engage in natural conversations powered by advanced AI</p>
+                <h3>Expert Guidance</h3>
+                <p>Engage in natural conversations powered by the newest LLMs trained by a Card Scheme expert</p>
             </div>
             <div class="feature-card">
                 <span class="emoji">🔒</span>
@@ -38,6 +48,38 @@
                 <span class="emoji">⚡</span>
                 <h3>Fast Responses</h3>
                 <p>Get instant answers to your questions</p>
+            </div>
+        </section>
+
+        <!-- Feedback Form Section -->
+        <section class="feedback-section">
+            <h2>Share Your Feedback</h2>
+            <p>Help us improve by sharing your experience with AI Resolve Bot.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdPGKZBhxqXfYPHZ1pJBwSH_yZmxJYQKXXYzQoIYw0YVBQgQw/viewform?usp=sf_link" class="feedback-button" target="_blank">Give Feedback</a>
+            <!-- Hidden link for admin reference -->
+            <!-- Google Sheets Response Collection: https://docs.google.com/spreadsheets/d/1j-XRss3zg-sZHdDL6n80enyZ2UdbPgw0LsVB6K_qTaU/edit?usp=sharing -->
+        </section>
+
+        <div style="margin: 3rem 0"></div>
+
+        <!-- Changelog Section -->
+        <section class="changelog">
+            <h2>What's New - January 2025</h2>
+            <div class="changelog-content">
+                <ul>
+                    <li>
+                        Our chatbot now leverages the latest advancements in Chain of Thought reasoning, enabling it to provide more accurate, step-by-step guidance for complex dispute scenarios. This enhancement improves decision-making and clarity for agents handling intricate chargeback queries.
+                    </li>
+                    <li>
+                        The bot has been trained to include the latest Visa Core Rules from October 2024. These updates ensure agents have access to the most current guidelines for managing chargebacks, compliance requirements, and dispute resolution.
+                    </li>
+                    <li>
+                        We've integrated comprehensive guidance on US Regulation E, providing clarity on consumer protection laws. This feature helps agents navigate disputes and ensures regulatory compliance
+                    </li>
+                    <li>
+                        Enhanced detection and guidance for dispute and chargeback abuse patterns, helping agents identify and handle potential false claims more effectively.
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
