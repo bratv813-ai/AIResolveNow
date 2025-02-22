@@ -70,6 +70,8 @@ h1 {
 
 /* Chat Container */
 .chat-container {
+    display: flex;
+    flex-direction: column;
     background: var(--card-bg);
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -77,6 +79,12 @@ h1 {
     overflow: hidden;
     backdrop-filter: blur(10px);
     box-shadow: var(--glow-shadow);
+}
+
+.chat-container iframe {
+    flex: 1;
+    border: none;
+    background: var(--card-bg);
 }
 
 /* Features Section */
@@ -146,6 +154,27 @@ h1 {
 
     .features {
         grid-template-columns: 1fr;
+    }
+
+    .chat-container {
+        padding: 1rem;
+    }
+
+    .chatbot-header {
+        padding: 1rem;
+    }
+
+    .chatbot-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .chatbot-header p {
+        font-size: 0.9rem;
+    }
+
+    .separator-text {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
     }
 }
 
@@ -397,16 +426,18 @@ input:focus, textarea:focus {
 }
 
 .changelog-card {
-    background: white;  /* White background for cards */
+    background: var(--card-bg);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .changelog-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--glow-shadow);
+    border-color: rgba(182, 36, 255, 0.3);
 }
 
 .card-header {
@@ -418,18 +449,22 @@ input:focus, textarea:focus {
 
 .card-header i {
     font-size: 24px;
-    color: var(--primary-color);
+    color: var(--neon-purple);
 }
 
 .card-header h3 {
     font-size: 18px;
     font-weight: 600;
-    color: #1a1a1a;  /* Dark text for white cards */
+    color: var(--text-bright);
     margin: 0;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .changelog-card p {
-    color: #666;  /* Gray text for better readability */
+    color: var(--text-dim);
     font-size: 14px;
     line-height: 1.6;
     margin: 0;
@@ -534,4 +569,89 @@ input:focus, textarea:focus {
     .warning-text {
         font-size: 0.9rem;
     }
+}
+
+/* Chatbot Headers and Separator */
+.chatbot-header {
+    padding: 1.5rem;
+    background: var(--gradient-primary);
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+}
+
+.chatbot-header h3 {
+    color: var(--text-bright);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.chatbot-header p {
+    color: var(--text-bright);
+    opacity: 0.9;
+    font-size: 1rem;
+}
+
+.chatbot-separator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.separator-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--neon-purple),
+        transparent
+    );
+}
+
+.separator-text {
+    color: var(--text-bright);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: var(--card-bg);
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chatbot-header {
+        padding: 1rem;
+    }
+
+    .chatbot-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .chatbot-header p {
+        font-size: 0.9rem;
+    }
+
+    .separator-text {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+.changelog-header.previous-updates {
+    grid-column: 1 / -1;
+    margin: 2rem 0 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.changelog-header.previous-updates h3 {
+    font-size: 1.5rem;
+    color: var(--text-dim);
+    text-align: center;
+    margin: 0;
 } 
