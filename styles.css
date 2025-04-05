@@ -654,4 +654,29 @@ input:focus, textarea:focus {
     color: var(--text-dim);
     text-align: center;
     margin: 0;
+}
+
+/* Typebot Container Styling */
+.typebot-container {
+    flex: 1;
+    min-height: 600px;
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 0 0 1rem 1rem;
+}
+
+/* Ensure Typebot fits properly in our container */
+typebot-standard {
+    display: block;
+    background: transparent;
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden;
+}
+
+.chat-container iframe, 
+.chat-container typebot-standard {
+    flex: 1;
+    border: none;
+    background: var(--card-bg);
+    min-height: 600px;
 } 
